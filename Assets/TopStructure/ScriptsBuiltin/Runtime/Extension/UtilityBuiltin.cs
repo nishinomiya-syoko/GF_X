@@ -111,67 +111,67 @@ public static class UtilityBuiltin
         }
         public static string GetDataTablePath(string name, bool useBytes)
         {
-            return Utility.Text.Format("Assets/AAAGame/DataTable/{0}.{1}", name, useBytes ? "bytes": "txt");
+            return Utility.Text.Format("Assets/TopStructure/DataTable/{0}.{1}", name, useBytes ? "bytes": "txt");
         }
 
         public static string GetSoundPath(string name)
         {
-            return Utility.Text.Format("Assets/AAAGame/Audio/{0}", name);
+            return Utility.Text.Format("Assets/TopStructure/Audio/{0}", name);
         }
 
         public static string GetScenePath(string name)
         {
-            return Utility.Text.Format("Assets/AAAGame/Scene/{0}.unity", name);
+            return Utility.Text.Format("Assets/TopStructure/Scene/{0}.unity", name);
         }
         public static string GetEntityPath(string name)
         {
-            return Utility.Text.Format("Assets/AAAGame/Prefabs/Entity/{0}.prefab", name);
+            return Utility.Text.Format("Assets/TopStructure/Prefabs/Entity/{0}.prefab", name);
         }
 
         public static string GetUIFormPath(string v)
         {
-            return Utility.Text.Format("Assets/AAAGame/Prefabs/UI/{0}.prefab", v);
+            return Utility.Text.Format("Assets/TopStructure/Prefabs/UI/{0}.prefab", v);
         }
 
         public static string GetTexturePath(string fileName)
         {
-            return Utility.Text.Format("Assets/AAAGame/Textures/{0}", fileName);
+            return Utility.Text.Format("Assets/TopStructure/Textures/{0}", fileName);
         }
         public static string GetSpritesPath(string fileName)
         {
-            return Utility.Text.Format("Assets/AAAGame/Sprites/{0}", fileName);
+            return Utility.Text.Format("Assets/TopStructure/Sprites/{0}", fileName);
         }
         public static string GetConfigPath(string v, bool useBytes)
         {
-            return Utility.Text.Format("Assets/AAAGame/Config/{0}.{1}", v, useBytes ? "bytes" : "txt");
+            return Utility.Text.Format("Assets/TopStructure/Config/{0}.{1}", v, useBytes ? "bytes" : "txt");
         }
         public static string GetScriptableConfigPath(string v)
         {
-            return Utility.Text.Format("Assets/AAAGame/ScriptableAssets/{0}.asset", v);
+            return Utility.Text.Format("Assets/TopStructure/ScriptableAssets/{0}.asset", v);
         }
 
         public static string GetPrefab(string v)
         {
-            return Utility.Text.Format("Assets/AAAGame/Prefabs/{0}.prefab", v);
+            return Utility.Text.Format("Assets/TopStructure/Prefabs/{0}.prefab", v);
         }
 
         public static string GetLanguagePath(string v, bool useBytes)
         {
-            return Utility.Text.Format("Assets/AAAGame/Language/{0}.{1}", v, useBytes ? "bytes" : "json");
+            return Utility.Text.Format("Assets/TopStructure/Language/{0}.{1}", v, useBytes ? "bytes" : "json");
         }
         public static string GetMaterialPath(string v)
         {
-            return Utility.Text.Format("Assets/AAAGame/Material/{0}.mat", v);
+            return Utility.Text.Format("Assets/TopStructure/Material/{0}.mat", v);
         }
 
         public static string GetHotfixDll(string dllName)
         {
-            return Utility.Text.Format("Assets/AAAGame/HotfixDlls/{0}.bytes", dllName);
+            return Utility.Text.Format("Assets/TopStructure/HotfixDlls/{0}.bytes", dllName);
         }
 
         public static string GetScriptableAsset(string v)
         {
-            return Utility.Text.Format("Assets/AAAGame/ScriptableAssets/{0}.asset", v);
+            return Utility.Text.Format("Assets/TopStructure/ScriptableAssets/{0}.asset", v);
         }
     }
     public class Json

@@ -11,7 +11,7 @@ public static class EntityExtension
     /// 创建粒子特效
     /// </summary>
     /// <param name="eCom"></param>
-    /// <param name="fxName">特效prefab, 相对路径AAAGame/Prefabs/Entity/</param>
+    /// <param name="fxName">特效prefab, 相对路径TopStructure/Prefabs/Entity/</param>
     /// <param name="spawnPos">特效位置</param>
     /// <param name="lifeTime">几秒后销毁粒子</param>
     /// <returns></returns>
@@ -133,7 +133,7 @@ public static class EntityExtension
     /// 创建Entity
     /// </summary>
     /// <param name="eCom"></param>
-    /// <param name="pfbName">预制体资源名(相对于Assets/AAAGame/Prefabs/Entity目录)</param>
+    /// <param name="pfbName">预制体资源名(相对于Assets/TopStructure/Prefabs/Entity目录)</param>
     /// <param name="logicName">Entity逻辑脚本名</param>
     /// <param name="eGroup">Entity所属的组(Const.EntityGroup枚举)</param>
     /// <param name="priority">异步加载优先级</param>
@@ -151,7 +151,7 @@ public static class EntityExtension
     /// 创建Entity
     /// </summary>
     /// <param name="eCom"></param>
-    /// <param name="pfbName">预制体资源名(相对于Assets/AAAGame/Prefabs/Entity目录)</param>
+    /// <param name="pfbName">预制体资源名(相对于Assets/TopStructure/Prefabs/Entity目录)</param>
     /// <param name="logicName">Entity逻辑脚本名</param>
     /// <param name="eGroup">Entity所属的组(Const.EntityGroup枚举)</param>
     /// <param name="parms">Entity参数(必须)</param>
@@ -166,7 +166,7 @@ public static class EntityExtension
     /// </summary>
     /// <typeparam name="T">Entity逻辑脚本类型</typeparam>
     /// <param name="eCom"></param>
-    /// <param name="pfbName">预制体资源名(相对于Assets/AAAGame/Prefabs/Entity目录)</param>
+    /// <param name="pfbName">预制体资源名(相对于Assets/TopStructure/Prefabs/Entity目录)</param>
     /// <param name="eGroup">Entity所属的组(Const.EntityGroup枚举)</param>
     /// <param name="priority">异步加载优先级</param>
     /// <param name="parms">Entity参数(必须)</param>
@@ -184,7 +184,7 @@ public static class EntityExtension
     /// </summary>
     /// <typeparam name="T">Entity逻辑脚本类型</typeparam>
     /// <param name="eCom"></param>
-    /// <param name="pfbName">预制体资源名(相对于Assets/AAAGame/Prefabs/Entity目录)</param>
+    /// <param name="pfbName">预制体资源名(相对于Assets/TopStructure/Prefabs/Entity目录)</param>
     /// <param name="eGroup">Entity所属的组(Const.EntityGroup枚举)</param>
     /// <param name="parms">Entity参数(必须)</param>
     /// <returns>Entity Id</returns>

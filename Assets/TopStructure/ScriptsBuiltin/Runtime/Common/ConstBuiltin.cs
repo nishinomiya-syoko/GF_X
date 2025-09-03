@@ -3,7 +3,7 @@
 /// </summary
 public static class ConstBuiltin
 {
-    public readonly static string HOT_FIX_DLL_DIR = "AAAGame/HotfixDlls";
+    public readonly static string HOT_FIX_DLL_DIR = "TopStructure/HotfixDlls";
     public readonly static string AOT_DLL_DIR = "AotDlls";//相对于Resources目录
     public readonly static string VersionFile = "version.json";
     public readonly static bool NoNetworkAllow = true;//热更模式时没网络是否允许进入游戏

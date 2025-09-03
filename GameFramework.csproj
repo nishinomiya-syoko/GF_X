@@ -69,10 +69,10 @@
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/LoadResourceStatus.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Entity/HideEntityCompleteEventArgs.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/DataTable/DataTableBase.cs" />
-    <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Base/Variable/Variable.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Network/AddressFamily.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Base/DataProvider/ReadDataUpdateEventArgs.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Entity/ShowEntityDependencyAssetEventArgs.cs" />
+    <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Base/Variable/Variable.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Base/TaskPool/TaskBase.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/ResourceManager.ResourceChecker.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Fsm/FsmManager.cs" />
@@ -291,8 +291,8 @@
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Base/GameFrameworkMultiDictionary.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/IResourceManager.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Base/GameFrameworkFunc.cs" />
-    <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/ResourceManager.ResourceGroup.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Scene/ISceneManager.cs" />
+    <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/ResourceManager.ResourceGroup.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Network/Packet.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Network/IPacketHandler.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Sound/ISoundManager.cs" />
@@ -334,8 +334,8 @@
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/CheckVersionListResult.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/UI/UIManager.UIFormInstanceObject.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/FileSystem/IFileSystemHelper.cs" />
-    <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Download/DownloadAgentHelperErrorEventArgs.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Base/DataProvider/DataProviderCreator.cs" />
+    <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Download/DownloadAgentHelperErrorEventArgs.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/DataTable/IDataTableManager.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/ResourceManager.ResourceLoader.LoadResourceAgent.cs" />
     <Compile Include="Assets/Plugins/UnityGameFramework/GameFramework/Resource/ResourceManager.ResourceLoader.LoadDependencyAssetTask.cs" />

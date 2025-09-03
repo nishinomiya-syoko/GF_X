@@ -47,29 +47,29 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.61f1c1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/DataTableBuiltinExtension.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Procedures/UpdateResourcesProcedure.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/GFHelper/ZStringTextHelper.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/BuiltinViewComponent.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/GFHelper/CustomSoundAgentHelper.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/GFHelper/CustomUIGroupHelper.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/GFHelper/NewtonsoftJsonHelper.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/SettingBuiltinExtension.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Common/ConstBuiltin.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/GFHelper/JsonLocalizationHelper.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Procedures/LoadHotfixDllProcedure.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Obfuz/GeneratedEncryptionVirtualMachine.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/ScriptableObject/AppSettings.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/EventArgs/LoadHotfixDllEventArgs.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Jobs/JobsPhysics.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Common/WebRequestCertNoValidate.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/LocalizationExtension.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/GFBuiltin.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Procedures/LaunchProcedure.cs" />
-    <Compile Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Extension/BuiltinViewComponent.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Extension/SettingBuiltinExtension.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/GFHelper/JsonLocalizationHelper.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Procedures/UpdateResourcesProcedure.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/ScriptableObject/AppSettings.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/GFHelper/NewtonsoftJsonHelper.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Common/ConstBuiltin.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Obfuz/GeneratedEncryptionVirtualMachine.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Procedures/LoadHotfixDllProcedure.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Extension/DataTableBuiltinExtension.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/GFHelper/CustomSoundAgentHelper.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Extension/UtilityBuiltin.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Jobs/JobsPhysics.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/EventArgs/LoadHotfixDllEventArgs.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Extension/LocalizationExtension.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Common/WebRequestCertNoValidate.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Procedures/LaunchProcedure.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Extension/GFBuiltin.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/GFHelper/CustomUIGroupHelper.cs" />
+    <Compile Include="Assets/TopStructure/ScriptsBuiltin/Runtime/GFHelper/ZStringTextHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/AAAGame/ScriptsBuiltin/Runtime/Builtin.Runtime.asmdef" />
+    <None Include="Assets/TopStructure/ScriptsBuiltin/Runtime/Builtin.Runtime.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
