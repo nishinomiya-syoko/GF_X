@@ -291,12 +291,37 @@ namespace UGF.EditorTools
         {
             SaveConfig(appConfig);
         }
+        static void OpenFileAtLineExternal(string fileName, int line)
+        {
+#if UNITY_EDITOR_OSX
+            // 修改后的代码
+            string baseDir = Path.GetDirectoryName(ConstEditor.BuiltinAssembly);
+            string relativePath = Path.Combine("..", "Editor", "Common", "ConstEditor.cs");
+            string fullPath = Path.Combine(baseDir, relativePath);
+
+            // 解析完整路径，处理相对路径中的".."
+            fullPath = Path.GetFullPath(fullPath);
+
+            // 检查文件是否存在
+            if (File.Exists(fullPath))
+            {
+                InternalEditorUtility.OpenFileAtLineExternal(fullPath, 0);
+            }
+            else
+            {
+                Debug.LogError($"文件不存在: {fullPath}");
+            }
+#else
+            InternalEditorUtility.OpenFileAtLineExternal(fileName, line);
+#endif
+        }
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
             if (GUILayout.Button(editorConstSettingsContent))
             {
-                InternalEditorUtility.OpenFileAtLineExternal(Path.Combine(Path.GetDirectoryName(ConstEditor.BuiltinAssembly), "../Editor/Common/ConstEditor.cs"), 0);
+                // InternalEditorUtility.OpenFileAtLineExternal(Path.Combine(Path.GetDirectoryName(ConstEditor.BuiltinAssembly), "../Editor/Common/ConstEditor.cs"), 0);
+                OpenFileAtLineExternal(Path.Combine(Path.GetDirectoryName(ConstEditor.BuiltinAssembly), "../Editor/Common/ConstEditor.cs"), 0);
             }
 
             EditorGUILayout.Space(10);
