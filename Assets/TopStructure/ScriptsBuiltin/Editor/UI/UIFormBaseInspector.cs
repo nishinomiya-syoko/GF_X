@@ -474,7 +474,6 @@ namespace UGF.EditorTools
                 varPrefixIndex = -1;
             }
         }
-
         public override void OnInspectorGUI()
         {
             CheckAndInitFields();
@@ -503,12 +502,14 @@ namespace UGF.EditorTools
             {
                 var uiFormClassName = uiForm.GetType().Name;
                 string scriptFile = UtilityBuiltin.AssetsPath.GetCombinePath(ConstEditor.UISerializeFieldDir, Utility.Text.Format("{0}.Variables.cs", uiFormClassName));
+                scriptFile = Path.GetFullPath(scriptFile);
                 InternalEditorUtility.OpenFileAtLineExternal(scriptFile, 0);
             }
             if (GUILayout.Button(openUiLogicBtTitle, highlightBtStyle, btnHeight))
             {
                 var monoScript = MonoScript.FromMonoBehaviour(uiForm);
                 string scriptFile = AssetDatabase.GetAssetPath(monoScript);
+                scriptFile = Path.GetFullPath(scriptFile);
                 InternalEditorUtility.OpenFileAtLineExternal(scriptFile, 0);
             }
             EditorGUILayout.EndHorizontal();
