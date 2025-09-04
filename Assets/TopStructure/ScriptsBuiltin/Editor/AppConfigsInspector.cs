@@ -272,6 +272,8 @@ namespace UGF.EditorTools
         private GUIStyle selectedStyle;
         GUIContent procedureTitleContent;
         GUIContent editorConstSettingsContent;
+        GUIContent utilityBuiltinSettingsContent;
+        GUIContent constBuiltinSettingsContent;
         GUIContent loadFromBytesContent;
         private void OnEnable()
         {
@@ -283,6 +285,8 @@ namespace UGF.EditorTools
 
             procedureTitleContent = new GUIContent("流程(Procedures)", "勾选的流程在有限状态机中有效");
             editorConstSettingsContent = EditorGUIUtility.TrTextContentWithIcon("Path Settings [设置DataTable/Config导入/导出路径]", "Settings");
+            utilityBuiltinSettingsContent = EditorGUIUtility.TrTextContentWithIcon("UtilityBuiltin Settings [设置DataTable/Config读取/写入路径]", "Settings");
+            constBuiltinSettingsContent = EditorGUIUtility.TrTextContentWithIcon("ConstBuiltin Settings [设置hotfix dll路径]", "Settings");
             loadFromBytesContent = new GUIContent("Load from bytes(勾选:二进制模式; 不勾选:文本模式)", "数据表/配置表/多语言表使用二进制模式");
             svDataArr = new GameDataScrollView[] { new GameDataScrollView(appConfig, GameDataType.DataTable), new GameDataScrollView(appConfig, GameDataType.Config), new GameDataScrollView(appConfig, GameDataType.Language) };
             ReloadScrollView(appConfig);
@@ -291,29 +295,12 @@ namespace UGF.EditorTools
         {
             SaveConfig(appConfig);
         }
-        static void OpenFileAtLineExternal(string fileName, int line)
+        private void OpenFileAtLineExternal(string relativeFilePath)
         {
-#if UNITY_EDITOR_OSX
-            // 修改后的代码
-            string baseDir = Path.GetDirectoryName(ConstEditor.BuiltinAssembly);
-            string relativePath = Path.Combine("..", "Editor", "Common", "ConstEditor.cs");
-            string fullPath = Path.Combine(baseDir, relativePath);
-
-            // 解析完整路径，处理相对路径中的".."
-            fullPath = Path.GetFullPath(fullPath);
-
-            // 检查文件是否存在
-            if (File.Exists(fullPath))
-            {
-                InternalEditorUtility.OpenFileAtLineExternal(fullPath, 0);
-            }
-            else
-            {
-                Debug.LogError($"文件不存在: {fullPath}");
-            }
-#else
-            InternalEditorUtility.OpenFileAtLineExternal(fileName, line);
-#endif
+            // 组合并规范化路径（自动处理跨平台差异）
+            string fullPath = Path.Combine(Path.GetDirectoryName(ConstEditor.BuiltinAssembly),relativeFilePath);
+            fullPath = Path.GetFullPath(fullPath); // 解析相对路径并统一格式
+            InternalEditorUtility.OpenFileAtLineExternal(fullPath, 0);
         }
         public override void OnInspectorGUI()
         {
@@ -321,7 +308,15 @@ namespace UGF.EditorTools
             if (GUILayout.Button(editorConstSettingsContent))
             {
                 // InternalEditorUtility.OpenFileAtLineExternal(Path.Combine(Path.GetDirectoryName(ConstEditor.BuiltinAssembly), "../Editor/Common/ConstEditor.cs"), 0);
-                OpenFileAtLineExternal(Path.Combine(Path.GetDirectoryName(ConstEditor.BuiltinAssembly), "../Editor/Common/ConstEditor.cs"), 0);
+                OpenFileAtLineExternal("../Editor/Common/ConstEditor.cs");
+            }
+            if (GUILayout.Button(utilityBuiltinSettingsContent))
+            {
+                OpenFileAtLineExternal("../Runtime/Extension/UtilityBuiltin.cs");
+            }
+            if (GUILayout.Button(constBuiltinSettingsContent))
+            {
+                OpenFileAtLineExternal("../Runtime/Common/ConstBuiltin.cs");
             }
 
             EditorGUILayout.Space(10);
