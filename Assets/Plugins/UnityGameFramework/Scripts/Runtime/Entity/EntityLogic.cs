@@ -190,6 +190,13 @@ namespace UnityGameFramework.Runtime
         {
         }
 
+        protected internal virtual void OnIntervalUpdate(float intervalSeconds)
+        {
+        }
+        protected internal virtual void OnLongIntervalUpdate(float longIntervalSeconds)
+        {
+        }
+
         /// <summary>
         /// 设置实体的可见性。
         /// </summary>

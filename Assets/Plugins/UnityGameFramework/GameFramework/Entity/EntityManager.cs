@@ -34,6 +34,10 @@ namespace GameFramework.Entity
         private EventHandler<ShowEntityDependencyAssetEventArgs> m_ShowEntityDependencyAssetEventHandler;
         private EventHandler<HideEntityCompleteEventArgs> m_HideEntityCompleteEventHandler;
 
+        private float m_AccumulatedTime;
+        private float m_AccumulatedLongTime;
+        private readonly float m_UpdateInterval;
+        private readonly float m_UpdateLongInterval;
         /// <summary>
         /// 初始化实体管理器的新实例。
         /// </summary>
@@ -55,6 +59,11 @@ namespace GameFramework.Entity
             m_ShowEntityUpdateEventHandler = null;
             m_ShowEntityDependencyAssetEventHandler = null;
             m_HideEntityCompleteEventHandler = null;
+
+            m_AccumulatedTime = 0f;
+            m_AccumulatedLongTime = 0f;
+            m_UpdateInterval = 0.2f;
+            m_UpdateLongInterval = 1f;
         }
 
         /// <summary>
@@ -181,6 +190,25 @@ namespace GameFramework.Entity
             foreach (KeyValuePair<string, EntityGroup> entityGroup in m_EntityGroups)
             {
                 entityGroup.Value.Update(elapseSeconds, realElapseSeconds);
+            }
+        }
+        void IntervalUpdate(float realElapseSeconds)
+        {
+            m_AccumulatedTime += realElapseSeconds;
+            m_AccumulatedLongTime += realElapseSeconds;
+            if (m_AccumulatedTime >= m_UpdateInterval)
+            {
+                foreach (KeyValuePair<string, EntityGroup> entityGroup in m_EntityGroups)
+                {
+                    entityGroup.Value.OnIntervalUpdate(m_UpdateInterval);
+                }
+            }
+            if (m_AccumulatedTime >= m_UpdateInterval)
+            {
+                foreach (KeyValuePair<string, EntityGroup> entityGroup in m_EntityGroups)
+                {
+                    entityGroup.Value.OnLongIntervalUpdate(m_UpdateLongInterval);
+                }
             }
         }
 

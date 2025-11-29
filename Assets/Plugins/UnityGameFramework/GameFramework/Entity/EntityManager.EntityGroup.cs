@@ -23,6 +23,7 @@ namespace GameFramework.Entity
             private readonly GameFrameworkLinkedList<IEntity> m_Entities;
             private LinkedListNode<IEntity> m_CachedNode;
 
+
             /// <summary>
             /// 初始化实体组的新实例。
             /// </summary>
@@ -162,6 +163,31 @@ namespace GameFramework.Entity
                     m_CachedNode = null;
                 }
             }
+
+            public void OnIntervalUpdate(float intervalSeconds)
+            {
+                LinkedListNode<IEntity> current = m_Entities.First;
+                while (current != null)
+                {
+                    m_CachedNode = current.Next;
+                    current.Value.OnIntervalUpdate(intervalSeconds);
+                    current = m_CachedNode;
+                    m_CachedNode = null;
+                }
+            }
+
+            public void OnLongIntervalUpdate(float longIntervalSeconds)
+            {
+                LinkedListNode<IEntity> current = m_Entities.First;
+                while (current != null)
+                {
+                    m_CachedNode = current.Next;
+                    current.Value.OnLongIntervalUpdate(longIntervalSeconds);
+                    current = m_CachedNode;
+                    m_CachedNode = null;
+                }
+            }
+            
 
             /// <summary>
             /// 实体组中是否存在实体。

@@ -106,5 +106,17 @@ namespace GameFramework.Entity
         /// <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
         /// <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
         void OnUpdate(float elapseSeconds, float realElapseSeconds);
+
+        /// <summary>
+        /// 间隔轮询。
+        /// </summary>
+        /// <param name="intervalSeconds">间隔时间</param>
+        void OnIntervalUpdate(float intervalSeconds);
+        
+        /// <summary>
+        /// 长间隔轮询。
+        /// </summary>
+        /// <param name="longIntervalSeconds">间隔时间</param>
+        void OnLongIntervalUpdate(float longIntervalSeconds);
     }
 }

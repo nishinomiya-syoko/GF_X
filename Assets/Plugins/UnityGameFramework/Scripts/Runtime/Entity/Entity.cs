@@ -276,5 +276,28 @@ namespace UnityGameFramework.Runtime
                 Log.Error("Entity '[{0}]{1}' OnUpdate with exception '{2}'.", m_Id, m_EntityAssetName, exception);
             }
         }
+
+        public void OnIntervalUpdate(float intervalSeconds)
+        {
+            try
+            {
+                m_EntityLogic.OnIntervalUpdate(intervalSeconds);
+            }
+            catch (Exception exception)
+            {
+                Log.Error("Entity '[{0}]{1}' OnIntervalUpdate with exception '{2}'.", m_Id, m_EntityAssetName, exception);
+            }
+        }
+        public void OnLongIntervalUpdate(float longIntervalSeconds)
+        {
+            try
+            {
+                m_EntityLogic.OnLongIntervalUpdate(longIntervalSeconds);
+            }
+            catch (Exception exception)
+            {
+                Log.Error("Entity '[{0}]{1}' OnLongIntervalUpdate with exception '{2}'.", m_Id, m_EntityAssetName, exception);
+            }
+        }
     }
 }
